@@ -1,18 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro"
 
-const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK42O-8jIBnCjvkEZAyGmQpqqI/edit?tab=t.0"
+const projectPathUrl = "#"
 ---
 
 <Layout>
   <main
     class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-charcoal px-5 pb-28 pt-16 sm:pb-32"
   >
+    <!-- Ambient crimson glow -->
     <div
       aria-hidden="true"
       class="pointer-events-none absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-crimson/20 blur-[140px]"
     >
     </div>
+    <!-- Subtle vignette -->
     <div
       aria-hidden="true"
       class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.7)_100%)]"
@@ -20,6 +22,7 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
     </div>
 
     <div class="relative z-10 flex w-full max-w-2xl flex-col items-center text-center">
+      <!-- Logo badge -->
       <div class="mb-8 flex flex-col items-center">
         <div
           class="relative rounded-full border border-steel/15 bg-charcoal-800/60 p-2 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/5"
@@ -30,7 +33,7 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
           >
           </div>
           <img
-            src="/logo.jpg"
+            src="/logo-badge.png"
             alt="Gray's Mobile Mechanics logo badge"
             width="220"
             height="220"
@@ -39,6 +42,7 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
         </div>
       </div>
 
+      <!-- Gear accent -->
       <div class="mb-7 flex items-center gap-3" aria-hidden="true">
         <span class="h-px w-10 bg-gradient-to-r from-transparent to-steel/30"></span>
         <svg
@@ -60,17 +64,20 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
         <span class="h-px w-10 bg-gradient-to-l from-transparent to-steel/30"></span>
       </div>
 
+      <!-- Main heading -->
       <h1
         class="text-brushed text-balance font-display text-4xl font-700 uppercase leading-[1.05] tracking-tight sm:text-6xl"
       >
         Site Under Development
       </h1>
 
+      <!-- Subtitle -->
       <p class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-steel-muted sm:text-lg">
         We are busy getting <span class="font-600 text-steel">Gray&apos;s Mobile Mechanics</span> ready
         for full speed! The official website is under active construction.
       </p>
 
+      <!-- Instructional note -->
       <div
         class="mt-8 w-full max-w-xl rounded-lg border border-crimson/40 bg-crimson/10 px-5 py-4 text-left shadow-[0_0_30px_-12px_rgba(153,27,27,0.8)]"
       >
@@ -98,10 +105,9 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
         </div>
       </div>
 
+      <!-- Call to action -->
       <a
         href={projectPathUrl}
-        target="_blank"
-        rel="noopener noreferrer"
         class="group mt-9 inline-flex items-center gap-3 rounded-md border border-steel/30 surface-steel px-7 py-3.5 text-sm font-600 uppercase tracking-widest text-steel shadow-[0_8px_24px_-10px_rgba(0,0,0,0.9)] transition-all duration-200 hover:border-crimson/70 hover:text-steel hover:shadow-[0_0_28px_-8px_rgba(153,27,27,0.9)] focus:outline-none focus-visible:ring-2 focus-visible:ring-crimson-bright focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
       >
         <svg
@@ -122,6 +128,7 @@ const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK4
       </a>
     </div>
 
+    <!-- Bottom status bar -->
     <footer
       class="fixed inset-x-0 bottom-0 z-20 border-t border-steel/10 bg-charcoal-800/90 backdrop-blur-sm"
     >
