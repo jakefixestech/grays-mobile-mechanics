@@ -1,27 +1,146 @@
 ---
-// src/pages/index.astro
----
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Gray's Mobile Mechanics</title>
-  </head>
-  <body class="bg-slate-900 text-slate-100 flex min-h-screen flex-col items-center justify-center p-4 font-sans">
-    <div class="max-w-md text-center space-y-6">
-      <div class="inline-flex p-3 bg-orange-500/10 text-orange-500 rounded-full animate-pulse">
-        🔧
-      </div>
-      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-        Gray's Mobile Mechanics
-      </h1>
-      <p class="text-slate-400 text-sm sm:text-base">
-        Our official single-page site is currently under construction. We come directly to you for all your automotive repair needs!
-      </p>
-      <div class="pt-4 border-t border-slate-800 text-xs text-slate-500">
-        Site setup managed by Jake Fixes Tech LLC
-      </div>
-    </div>
-  </body>
-</html>
+import Layout from "../layouts/Layout.astro"
 
+const projectPathUrl = "https://docs.google.com/document/d/1DNNCdUpnB5L2z7YEgCK42O-8jIBnCjvkEZAyGmQpqqI/edit?tab=t.0"
+---
+
+<Layout>
+  <main
+    class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-charcoal px-5 pb-28 pt-16 sm:pb-32"
+  >
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute left-1/2 top-1/3 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-crimson/20 blur-[140px]"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_45%,rgba(0,0,0,0.7)_100%)]"
+    >
+    </div>
+
+    <div class="relative z-10 flex w-full max-w-2xl flex-col items-center text-center">
+      <div class="mb-8 flex flex-col items-center">
+        <div
+          class="relative rounded-full border border-steel/15 bg-charcoal-800/60 p-2 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/5"
+        >
+          <div
+            class="absolute inset-0 rounded-full bg-crimson/10 blur-xl"
+            aria-hidden="true"
+          >
+          </div>
+          <img
+            src="/logo.jpg"
+            alt="Gray's Mobile Mechanics logo badge"
+            width="220"
+            height="220"
+            class="relative h-40 w-40 rounded-full object-cover sm:h-52 sm:w-52"
+          />
+        </div>
+      </div>
+
+      <div class="mb-7 flex items-center gap-3" aria-hidden="true">
+        <span class="h-px w-10 bg-gradient-to-r from-transparent to-steel/30"></span>
+        <svg
+          class="animate-spin-slow h-7 w-7 text-steel-muted"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 8.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"
+            stroke="currentColor"
+            stroke-width="1.5"></path>
+          <path
+            d="M19.4 13a1.7 1.7 0 00.34 1.87l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.7 1.7 0 00-1.87-.34 1.7 1.7 0 00-1.03 1.56V19a2 2 0 11-4 0v-.09A1.7 1.7 0 008.5 17.4a1.7 1.7 0 00-1.87.34l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.7 1.7 0 004.6 13a1.7 1.7 0 00-1.56-1.03H3a2 2 0 110-4h.09A1.7 1.7 0 004.6 6.5a1.7 1.7 0 00-.34-1.87l-.06-.06a2 2 0 112.83-2.83l.06.06a1.7 1.7 0 001.87.34H9a1.7 1.7 0 001.03-1.56V.5a2 2 0 114 0v.09A1.7 1.7 0 0015.5 2.6a1.7 1.7 0 001.87-.34l.06-.06a2 2 0 112.83 2.83l-.06.06A1.7 1.7 0 0019.4 7v.09A1.7 1.7 0 0021 8.5h.09a2 2 0 010 4H21a1.7 1.7 0 00-1.56 1.03l-.04-.53z"
+            stroke="currentColor"
+            stroke-width="1.2"
+            opacity="0.55"></path>
+        </svg>
+        <span class="h-px w-10 bg-gradient-to-l from-transparent to-steel/30"></span>
+      </div>
+
+      <h1
+        class="text-brushed text-balance font-display text-4xl font-700 uppercase leading-[1.05] tracking-tight sm:text-6xl"
+      >
+        Site Under Development
+      </h1>
+
+      <p class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-steel-muted sm:text-lg">
+        We are busy getting <span class="font-600 text-steel">Gray&apos;s Mobile Mechanics</span> ready
+        for full speed! The official website is under active construction.
+      </p>
+
+      <div
+        class="mt-8 w-full max-w-xl rounded-lg border border-crimson/40 bg-crimson/10 px-5 py-4 text-left shadow-[0_0_30px_-12px_rgba(153,27,27,0.8)]"
+      >
+        <div class="flex items-start gap-3">
+          <svg
+            class="mt-0.5 h-5 w-5 shrink-0 text-crimson-bright"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-sm leading-relaxed text-steel sm:text-base">
+            Please visit the <span class="font-600 text-crimson-bright"
+              >&apos;Morgan Project Path&apos;</span
+            > file in the Google Drive folder link sent to you for project updates and initial planning
+            documentation.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={projectPathUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group mt-9 inline-flex items-center gap-3 rounded-md border border-steel/30 surface-steel px-7 py-3.5 text-sm font-600 uppercase tracking-widest text-steel shadow-[0_8px_24px_-10px_rgba(0,0,0,0.9)] transition-all duration-200 hover:border-crimson/70 hover:text-steel hover:shadow-[0_0_28px_-8px_rgba(153,27,27,0.9)] focus:outline-none focus-visible:ring-2 focus-visible:ring-crimson-bright focus-visible:ring-offset-2 focus-visible:ring-offset-charcoal"
+      >
+        <svg
+          class="h-4 w-4 text-crimson-bright transition-transform duration-200 group-hover:rotate-12"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M14.7 6.3a4 4 0 00-5.2 5.2L3 18v3h3l6.5-6.5a4 4 0 005.2-5.2l-2.9 2.9-2.1-2.1 2.9-2.9z"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        View Project Path
+      </a>
+    </div>
+
+    <footer
+      class="fixed inset-x-0 bottom-0 z-20 border-t border-steel/10 bg-charcoal-800/90 backdrop-blur-sm"
+    >
+      <div
+        class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-5 py-3 text-xs uppercase tracking-widest sm:flex-row sm:text-sm"
+      >
+        <a
+          href="tel:8023593156"
+          class="font-600 text-steel transition-colors hover:text-crimson-bright"
+        >
+          802-359-3156
+        </a>
+        <span class="font-600 text-crimson-bright">We Come To You</span>
+        <span class="flex items-center gap-2 text-steel-muted">
+          <span class="animate-pulse-dot h-2 w-2 rounded-full bg-crimson-bright" aria-hidden="true"
+          ></span>
+          Dev In Progress
+        </span>
+      </div>
+    </footer>
+  </main>
+</Layout>
