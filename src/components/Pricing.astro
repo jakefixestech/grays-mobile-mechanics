@@ -1,0 +1,104 @@
+---
+// Placeholder pricing — easy to edit. Swap the `price` and `features` values
+// once the client finalizes numbers.
+const tiers = [
+  {
+    name: "Quick Service",
+    price: "Call for quote",
+    tagline: "Oil changes, batteries & routine maintenance.",
+    features: [
+      "On-site oil & filter changes",
+      "Battery, starter & alternator swaps",
+      "Fluid top-offs & inspections",
+      "Small engine tune-ups",
+    ],
+    featured: false,
+  },
+  {
+    name: "Diagnostic & Repair",
+    price: "Call for quote",
+    tagline: "Diagnostics and repairs for vehicles & engines.",
+    features: [
+      "Check engine light diagnostics",
+      "Brake service",
+      "Vehicle & ATV repairs",
+      "Mower, snowblower & generator repair",
+    ],
+    featured: true,
+  },
+  {
+    name: "Priority / After-Hours",
+    price: "Call for quote",
+    tagline: "24/7 availability when you can't wait.",
+    features: [
+      "Nights, weekends & holidays",
+      "Roadside & emergency response",
+      "Priority scheduling",
+      "Serving all of VT & NH",
+    ],
+    featured: false,
+  },
+]
+---
+
+<section id="pricing" class="bg-cloud py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="font-display text-sm font-600 uppercase tracking-[0.3em] text-brand">Pricing</span>
+      <h2 class="mt-3 font-display text-4xl font-700 uppercase leading-tight tracking-tight text-balance sm:text-5xl">
+        Fair rates, no surprises
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-steel text-pretty">
+        Every job is a little different, so we quote honestly up front. Reach out
+        and we&apos;ll give you a straight answer before any work begins.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      {
+        tiers.map((tier) => (
+          <div
+            class={`relative flex flex-col rounded-2xl border p-8 ${
+              tier.featured
+                ? "border-brand bg-ink text-paper shadow-xl"
+                : "border-ink/10 bg-paper text-ink shadow-sm"
+            }`}
+          >
+            {tier.featured && (
+              <span class="absolute -top-3 left-8 rounded-full bg-brand px-3 py-1 text-xs font-600 uppercase tracking-wide text-paper">
+                Most Common
+              </span>
+            )}
+            <h3 class="font-display text-xl font-700 uppercase tracking-wide">{tier.name}</h3>
+            <p class={`mt-2 text-sm ${tier.featured ? "text-fog" : "text-steel"}`}>{tier.tagline}</p>
+            <p class="mt-6 font-display text-3xl font-700 text-brand">{tier.price}</p>
+
+            <ul class="mt-6 flex flex-1 flex-col gap-3">
+              {tier.features.map((feature) => (
+                <li class="flex items-start gap-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 shrink-0 text-brand"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span class={tier.featured ? "text-cloud" : "text-steel"}>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="#contact"
+              class={`mt-8 inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-600 transition-colors ${
+                tier.featured
+                  ? "bg-brand text-paper hover:bg-brand-dark"
+                  : "bg-ink text-paper hover:bg-steel"
+              }`}
+            >
+              Request a Quote
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="mt-8 text-center text-sm text-steel">
+      Prices coming soon — for now, call <a href="tel:8023593156" class="font-600 text-brand hover:underline">802-359-3156</a> for a personalized estimate.
+    </p>
+  </div>
+</section>

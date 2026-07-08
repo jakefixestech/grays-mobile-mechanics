@@ -1,74 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Oswald", "Arial Narrow", sans-serif;
-  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
 
-  /* Core palette: charcoal, brushed steel silver, crimson */
-  --color-charcoal: #0b0f17;
-  --color-charcoal-800: #111827;
-  --color-charcoal-700: #1a2130;
-  --color-steel: #c7ccd4;
-  --color-steel-muted: #8b929e;
-  --color-crimson: #991b1b;
-  --color-crimson-bright: #c2313b;
+  /* Brand palette: black + red with warm neutrals */
+  --color-ink: #0d0d0f;
+  --color-ink-soft: #17181b;
+  --color-steel: #26272b;
+  --color-fog: #a1a1aa;
+  --color-cloud: #f5f5f4;
+  --color-paper: #ffffff;
+
+  --color-brand: #e11d2a;
+  --color-brand-dark: #b3151f;
+  --color-brand-soft: #fee2e2;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-/* Brushed steel metallic text */
-.text-brushed {
-  background: linear-gradient(
-    180deg,
-    #f4f6f9 0%,
-    #cfd4dc 28%,
-    #9aa0ac 52%,
-    #eef1f5 60%,
-    #aab0bc 74%,
-    #7b818d 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-}
-
-/* Brushed steel surface texture */
-.surface-steel {
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 40%),
-    repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
-      rgba(0, 0, 0, 0.04) 2px,
-      rgba(0, 0, 0, 0.04) 3px
-    ),
-    linear-gradient(160deg, #1a2130 0%, #111827 60%, #0b0f17 100%);
-}
-
-@keyframes spin-slow {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.animate-spin-slow {
-  animation: spin-slow 12s linear infinite;
-}
-
-@keyframes pulse-dot {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.35;
-    transform: scale(0.8);
-  }
-}
-.animate-pulse-dot {
-  animation: pulse-dot 1.4s ease-in-out infinite;
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }

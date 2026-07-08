@@ -1,0 +1,63 @@
+---
+const year = new Date().getFullYear()
+---
+
+<footer class="border-t border-white/10 bg-ink text-paper">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-sm">
+        <div class="flex items-center gap-3">
+          <img
+            src="/images/logo.png"
+            alt="Gray's Mobile Mechanics logo"
+            width="44"
+            height="44"
+            class="h-11 w-11 rounded-full ring-1 ring-white/15"
+          />
+          <span class="flex flex-col leading-none">
+            <span class="font-display text-lg font-700 uppercase tracking-wide">Gray&apos;s Mobile</span>
+            <span class="font-display text-xs font-600 uppercase tracking-[0.35em] text-brand">Mechanics LLC</span>
+          </span>
+        </div>
+        <p class="mt-4 text-sm leading-relaxed text-fog">
+          Mobile mechanic &amp; small engine repair that comes to you. Serving Vermont
+          &amp; New Hampshire, 24/7/365.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3">
+        <div>
+          <h3 class="font-display text-sm font-600 uppercase tracking-wide text-brand">Contact</h3>
+          <ul class="mt-4 flex flex-col gap-2 text-sm text-fog">
+            <li><a href="tel:8023593156" class="transition-colors hover:text-paper">802-359-3156</a></li>
+            <li>Orange, VT</li>
+            <li>Serving VT &amp; NH</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-600 uppercase tracking-wide text-brand">Explore</h3>
+          <ul class="mt-4 flex flex-col gap-2 text-sm text-fog">
+            <li><a href="#services" class="transition-colors hover:text-paper">Services</a></li>
+            <li><a href="#pricing" class="transition-colors hover:text-paper">Pricing</a></li>
+            <li><a href="#contact" class="transition-colors hover:text-paper">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-sm font-600 uppercase tracking-wide text-brand">Follow</h3>
+          <ul class="mt-4 flex flex-col gap-2 text-sm text-fog">
+            <li>
+              <a href="#" class="inline-flex items-center gap-2 transition-colors hover:text-paper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"></path></svg>
+                Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-white/10 pt-6 text-center text-xs text-fog">
+      &copy; {year} Gray&apos;s Mobile Mechanics LLC. All rights reserved.
+    </div>
+  </div>
+</footer>
