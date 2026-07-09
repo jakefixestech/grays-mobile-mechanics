@@ -1,24 +1,23 @@
 ---
-// Placeholder testimonials — swap `quote`, `name`, and `location` with real
-// reviews from Facebook or new customers when available.
+// Real reviews from Gray's Mobile Mechanics customers (Facebook & text).
 const testimonials = [
   {
     quote:
-      "Your review could go here. Add a real customer quote about how convenient and honest the service was.",
-    name: "Customer Name",
-    location: "Vermont",
+      "If you are looking for quality services right at your door, Morgan is your guy! Fixed my son's dirtbike and maintained my car!!!",
+    name: "Rayanne Vesper",
+    location: "Facebook Review",
   },
   {
     quote:
-      "Placeholder for a testimonial about a roadside or driveway repair. Highlight the come-to-you convenience.",
-    name: "Customer Name",
-    location: "New Hampshire",
+      "Highly recommend! Is willing to do just about whatever it takes to get the job done! Thank you Morgan!",
+    name: "Mariah Potwin",
+    location: "Facebook Review",
   },
   {
     quote:
-      "Space for a review about small engine or seasonal equipment work. Mention fair pricing and quick turnaround.",
-    name: "Customer Name",
-    location: "Orange, VT",
+      "I had a lawn mower that had been through a flood. After months of trying to figure out what to do with it, I decided to get a professional opinion, so I called Gray's Mobile Mechanics. Morgan came over and had that thing purring in fifteen minutes. It didn't even sputter or stall out. Thorough and talented — this guy knows how to fix it.",
+    name: "Thaddeus Wildasin",
+    location: "Customer Testimonial",
   },
 ]
 ---
@@ -31,30 +30,25 @@ const testimonials = [
         What our neighbors say
       </h2>
       <p class="mt-5 text-lg leading-relaxed text-steel text-pretty">
-        Real reviews from VT &amp; NH customers coming soon. Here&apos;s where they&apos;ll live.
+        Real reviews from VT &amp; NH customers.
       </p>
     </div>
 
-    <div class="mt-14 grid gap-6 md:grid-cols-3">
+    <div class="mx-auto mt-14 max-w-3xl divide-y divide-ink/10">
       {
         testimonials.map((t) => (
-          <figure class="flex h-full flex-col rounded-2xl border border-ink/10 bg-cloud/60 p-7">
+          <figure class="flex flex-col items-center py-10 text-center first:pt-0 last:pb-0">
             <div class="flex gap-1 text-brand" aria-hidden="true">
               {Array.from({ length: 5 }).map(() => (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
               ))}
             </div>
-            <blockquote class="mt-4 flex-1 text-base leading-relaxed text-steel">
+            <blockquote class="mt-5 max-w-2xl text-lg leading-relaxed text-steel text-balance">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
-            <figcaption class="mt-6 flex items-center gap-3 border-t border-ink/10 pt-5">
-              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand font-display text-sm font-700 text-paper" aria-hidden="true">
-                {t.name.charAt(0)}
-              </span>
-              <span class="flex flex-col leading-tight">
-                <span class="font-600 text-ink">{t.name}</span>
-                <span class="text-sm text-steel">{t.location}</span>
-              </span>
+            <figcaption class="mt-6 flex flex-col items-center leading-tight">
+              <span class="font-600 text-ink">{t.name}</span>
+              <span class="text-sm text-steel">{t.location}</span>
             </figcaption>
           </figure>
         ))

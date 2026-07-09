@@ -71,7 +71,7 @@ const tiers = [
             )}
             <h3 class="font-display text-xl font-700 uppercase tracking-wide">{tier.name}</h3>
             <p class={`mt-2 text-sm ${tier.featured ? "text-fog" : "text-steel"}`}>{tier.tagline}</p>
-            <p class="mt-6 font-display text-3xl font-700 text-brand">{tier.price}</p>
+            <h4 class="mt-6 font-display text-3xl font-700 text-brand">{tier.price}</h4>
 
             <ul class="mt-6 flex flex-1 flex-col gap-3">
               {tier.features.map((feature) => (

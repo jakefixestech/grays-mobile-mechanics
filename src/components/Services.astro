@@ -69,6 +69,9 @@ const icons: Record<string, string> = {
   search:
     '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
 }
+
+const columnA = services.slice(0, 5)
+const columnB = services.slice(5)
 ---
 
 <section id="services" class="bg-ink py-20 text-paper sm:py-28">
@@ -84,17 +87,23 @@ const icons: Record<string, string> = {
       </p>
     </div>
 
-    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-14 grid gap-x-14 border-t border-white/10 lg:grid-cols-2">
       {
-        services.map((service) => (
-          <div class="group rounded-2xl border border-white/10 bg-ink-soft p-6 transition-colors hover:border-brand/50">
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/15 text-brand transition-colors group-hover:bg-brand group-hover:text-paper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true" set:html={icons[service.icon]} />
-            </div>
-            <h3 class="mt-5 font-display text-lg font-600 uppercase tracking-wide leading-snug">
-              {service.title}
-            </h3>
-            <p class="mt-2 text-sm leading-relaxed text-fog">{service.body}</p>
+        [columnA, columnB].map((column) => (
+          <div>
+            {column.map((service) => (
+              <div class="group -ml-4 flex items-start gap-5 border-b border-l-2 border-white/10 border-l-transparent py-7 pl-4 transition-colors hover:border-l-brand">
+                <div class="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/15 text-brand transition-colors group-hover:bg-brand group-hover:text-paper">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true" set:html={icons[service.icon]} />
+                </div>
+                <div>
+                  <h3 class="font-display text-lg font-600 uppercase tracking-wide leading-snug">
+                    {service.title}
+                  </h3>
+                  <p class="mt-1.5 text-sm leading-relaxed text-fog">{service.body}</p>
+                </div>
+              </div>
+            ))}
           </div>
         ))
       }
