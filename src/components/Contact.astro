@@ -73,7 +73,8 @@ const services = [
           <input type="hidden" name="subject" value="New appointment request — Gray's Mobile Mechanics" />
           <input type="hidden" name="from_name" value="Gray's Mobile Mechanics Website" />
           <!-- Honeypot spam trap, must stay hidden from real visitors -->
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label for="botcheck" class="hidden" style="display:none">Leave this field blank</label>
+          <input id="botcheck" type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="flex flex-col gap-2">
@@ -153,7 +154,7 @@ const services = [
           ></p>
 
           <p class="text-center text-xs text-fog">
-            Prefer to talk? Call or text <a href="tel:8023593156" class="font-600 text-brand hover:underline">802-359-3156</a> anytime.
+            Prefer to talk? Call or text <a href="tel:8023593156" class="font-600 text-brand-bright hover:underline">802-359-3156</a> anytime.
           </p>
         </form>
       </div>
