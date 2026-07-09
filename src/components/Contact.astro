@@ -25,7 +25,7 @@ const services = [
         </h2>
         <p class="mt-5 max-w-lg text-lg leading-relaxed text-fog text-pretty">
           Tell us what you&apos;re dealing with and where you are. We&apos;ll reach out to
-          confirm a time that works — days, nights, weekends, or holidays.
+          confirm a time that works, whether that's days, nights, weekends, or holidays.
         </p>
 
         <div class="mt-10 flex flex-col gap-5">
@@ -70,7 +70,7 @@ const services = [
         >
           <!-- Web3Forms access key — tied to Morgan's Web3Forms account (graymorgan2015@gmail.com) -->
           <input type="hidden" name="access_key" value="28ee6369-75cf-4a85-8b23-8ebd9a96aaf0" />
-          <input type="hidden" name="subject" value="New appointment request — Gray's Mobile Mechanics" />
+          <input type="hidden" name="subject" value="New appointment request for Gray's Mobile Mechanics" />
           <input type="hidden" name="from_name" value="Gray's Mobile Mechanics Website" />
           <!-- Honeypot spam trap, must stay hidden from real visitors -->
           <label for="botcheck" class="hidden" style="display:none">Leave this field blank</label>
@@ -194,7 +194,7 @@ const services = [
       if (result.success) {
         form.reset()
         submitLabel.textContent = "Request Appointment"
-        showStatus("Thanks — your request is in. We'll be in touch shortly.", false)
+        showStatus("Thanks! Your request is in. We'll be in touch shortly.", false)
       } else {
         submitLabel.textContent = "Request Appointment"
         showStatus("Something went wrong. Please call or text us instead.", true)
