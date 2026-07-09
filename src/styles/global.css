@@ -15,6 +15,12 @@
   --color-brand: #e11d2a;
   --color-brand-dark: #b3151f;
   --color-brand-soft: #fee2e2;
+
+  /* Lighter red used only for small/normal-size brand-colored text on dark
+     backgrounds. Plain --color-brand fails WCAG AA (4.5:1) at small sizes on
+     --color-ink; this variant passes ~6:1. Use --color-brand-dark instead
+     when small brand-colored text sits on a light background. */
+  --color-brand-bright: #ff4d5e;
 }
 
 html {
@@ -27,4 +33,17 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Visually hidden until focused — used for the skip-to-content link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
