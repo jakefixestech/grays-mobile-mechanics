@@ -10,6 +10,45 @@ const {
   title = "Gray's Mobile Mechanics LLC | We Come to You — VT & NH",
   description = "Mobile mechanic & small engine repair in Orange, VT serving Vermont and New Hampshire. Vehicles, ATVs, mowers, snowblowers & generators. Open 24/7. Call 802-359-3156.",
 } = Astro.props
+
+// Canonical NAP (name, address, phone) — keep this in sync with Nav, Footer,
+// About, and Contact if any of it ever changes.
+// TODO: replace SITE_URL with the live domain once it's registered/deployed.
+const SITE_URL = "https://graysmobilemechanics.com"
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  name: "Gray's Mobile Mechanics LLC",
+  image: `${SITE_URL}/images/logo.webp`,
+  url: SITE_URL,
+  telephone: "+18023593156",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Orange",
+    addressRegion: "VT",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "State", name: "Vermont" },
+    { "@type": "State", name: "New Hampshire" },
+  ],
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  sameAs: ["https://www.facebook.com/share/1Gbcrma3Tv/"],
+}
 ---
 
 <!doctype html>
@@ -27,6 +66,8 @@ const {
       rel="stylesheet"
     />
     <title>{title}</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
   </head>
   <body class="bg-paper text-ink">
     <a href="#main" class="skip-link rounded-md bg-brand px-4 py-2 text-sm font-600 text-paper">

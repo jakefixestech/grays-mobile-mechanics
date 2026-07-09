@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://graysmobilemechanics.com/sitemap-index.xml
